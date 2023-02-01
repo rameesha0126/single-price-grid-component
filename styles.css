@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-yellow: hsl(71, 73%, 54%);
+    --Light-gray: hsl(204, 43%, 93%);
+    --Grayish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Light-gray);
+}
+
+.card-component {
+    max-width: 375px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.432);
+    border-radius: 1rem;
+}
+
+#part-1, #part-2, #part-3 {
+    padding: 1rem 2rem;
+}
+
+h1, h2, p, button {
+    margin: 1rem 0;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2, p {
+    font-weight: 400;
+}
+
+#part-1 {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem 1rem 0 0;
+}
+
+#part-2 {
+    background-color: var(--Cyan);
+}
+
+#part-3 {
+    background-color: var(--Grayish-blue);
+    border-radius: 0 0 1rem 1rem;
+}
+
+#part-1 h1 {
+    color: var(--Cyan);
+}
+
+#part-1 h2 {
+    color: var(--Bright-yellow);
+    font-weight: 700;
+}
+
+#part-1 p {
+    color: var(--Grayish-blue);
+}
+
+#part-2 h1, #part-2 p, #part-2 h2, #part-2 button, #part-3 h1, #part-3 p {
+    color: var(--Light-gray);
+}
+
+#part-2 p {
+    display: flex;
+    align-items: center;
+}
+
+/*
+h1:first-of-type {
+    color: var(--Cyan);
+}
+
+h2:first-of-type {
+    color: var(--Bright-yellow);
+}
+
+h1, h2, p, button {
+    color: var(--Light-gray);
+}*/
+
+#part-2 span {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-right: 0.75rem;
+}
+
+#part-2 button {
+    background-color: var(--Bright-yellow);
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.432);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 600px) {
+    .card-component {
+        max-width: 750px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    #part-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    #part-2 {
+        border-radius: 0 0 0 1rem;
+    }
+
+    #part-3 {
+        border-radius: 0 0 1rem 0;
+    }
+
+    #part-2 button:hover, #part-2 button:active {
+        background-color: var(--Light-gray);
+        color: var(--Bright-yellow);
+        outline: 2px solid var(--Bright-yellow);
+    }
+}
